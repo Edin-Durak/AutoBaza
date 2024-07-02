@@ -1,0 +1,383 @@
+/* Defining default styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+
+/* Base font size */
+html {
+  font-size: 62.5%; /* 1rem = 10px; 10px/16px = 62.5% */
+  font-family: "Roboto", "sans-serif";
+}
+
+/* Media Query: Tablet Landscape */
+@media only screen and (max-width: 75em) {
+  /* width < 1200px */
+  html {
+    font-size: 56.25%; /* 1rem = 9px; 9px/16px = 56.25% */
+  }
+}
+
+/* Media Query: Tablet Portrait */
+@media only screen and (max-width: 61.9375em) {
+  /* width < 991px */
+  html {
+    font-size: 50%; /* 1rem = 8px; 8px/16px = 50% */
+  }
+}
+
+.nav-bar {
+  background-color: #141414;
+  padding: 2rem 4rem;
+}
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+.nav-bar a {
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.main-content {
+  display: flex;
+  color: #141414;
+}
+.section-one {
+  background-color: #ebff00;
+  padding: 4rem;
+  width: 65%;
+  position: relative;
+  z-index: 2;
+}
+
+.section-one h1 {
+  margin: 4rem 0;
+  font-family: "Syne", "sans-serif";
+  font-size: 6.1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  max-width: 900px;
+}
+
+.section-one h2 {
+  font-family: "Syne", "sans-serif";
+  font-size: 4.9rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 54px;
+  margin-top: 20rem;
+}
+.section-one p {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 4rem; /* 166.667% */
+}
+
+.section-one p .p-break {
+  display: block;
+}
+
+.countdown {
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+div[class*="countdown-"] {
+  display: flex;
+  width: 240px;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  /*gap: 24px; Optional */
+  border: 1px solid #141414;
+  border-radius: 8px;
+}
+
+.countdown-day {
+  background-color: #141414;
+  border-radius: 8px;
+}
+
+#countdown-day {
+  color: #ebff00;
+}
+
+#countdown-day,
+#countdown-hour,
+#countdown-minutes,
+#countdown-seconds {
+  text-align: center;
+  font-size: 4.8rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 64px; /* 88.889% */
+}
+
+div[class*="countdown-"] > span:last-child {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px; /* 200% */
+}
+
+.countdown-day > span:last-child {
+  color: #ffffff;
+}
+
+.contact-links {
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+}
+.contact-links p {
+  font-size: 1.6rem;
+  line-height: 170%; /* 22.1px */
+  letter-spacing: 1px;
+  max-width: 280px;
+}
+
+.contact-links .contact-link {
+  display: block;
+  color: inherit;
+  font-weight: 800;
+}
+
+.section-two {
+  background: #f1f1f1;
+  width: 35%;
+  position: relative;
+  display: flex;
+  align-items: end;
+  padding: 4rem 1rem;
+}
+
+.car-desktop {
+  position: absolute;
+  top: 50%;
+  left: -77%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.car-mobile-img {
+  display: none;
+}
+
+.section-two .punch-line {
+  color: #313131;
+  font-family: "Syne", "sans-serif";
+  font-size: 3.9rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px; /* 150% */
+  letter-spacing: 0.2px;
+}
+
+.section-two .punch-line span {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  flex-shrink: 0;
+  background: #ebff00;
+}
+
+/* Styles for responsive design - Media querrys bellow */
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .section-one h2 {
+    margin-top: 10rem;
+  }
+
+  .countdown {
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .main-content {
+    flex-direction: column;
+  }
+  .section-one {
+    width: 100%;
+  }
+
+  .section-one h1 {
+    margin: 2rem 0;
+    font-size: 6rem;
+    max-width: 100%;
+  }
+  .section-one h1 .break {
+    display: block;
+    font-family: inherit;
+  }
+
+  .section-one h2 {
+    font-size: 5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 54px;
+    margin-top: 10rem;
+  }
+
+  .section-one p {
+    font-size: 2rem;
+  }
+
+  .countdown {
+    flex-wrap: nowrap;
+    gap: 2rem;
+  }
+  div[class*="countdown-"] {
+    width: 200px;
+  }
+  #countdown-day,
+  #countdown-hour,
+  #countdown-minutes,
+  #countdown-seconds {
+    font-size: 6rem;
+  }
+  div[class*="countdown-"] > span:last-child {
+    font-size: 2.3rem;
+    margin-top: -3rem;
+  }
+  .section-two {
+    width: 100%;
+    align-items: start;
+    padding-bottom: 0;
+  }
+  .car-desktop {
+    top: auto;
+    transform: none;
+    bottom: 0;
+    left: -67%;
+  }
+  .section-two .punch-line {
+    font-size: 4rem;
+    margin-bottom: 95rem;
+    max-width: 600px;
+  }
+}
+
+@media only screen and (min-width: 883px) and (max-width: 890px) {
+  .car-desktop {
+    left: -65%;
+  }
+}
+
+@media only screen and (min-width: 890px) and (max-width: 920px) {
+  .car-desktop {
+    left: -63%;
+  }
+}
+
+@media only screen and (min-width: 920px) and (max-width: 940px) {
+  .car-desktop {
+    left: -60%;
+  }
+}
+
+@media only screen and (min-width: 940px) and (max-width: 960px) {
+  .car-desktop {
+    left: -57%;
+  }
+}
+@media only screen and (min-width: 960px) and (max-width: 990px) {
+  .car-desktop {
+    left: -48%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .main-content {
+    flex-direction: column;
+  }
+  .section-one {
+    width: 100%;
+    padding: 4rem 16px;
+  }
+
+  .section-one h2 {
+    margin-top: 8rem;
+    font-size: 3.5rem;
+  }
+
+  .section-one p {
+    font-size: 2.5rem;
+  }
+  .section-one p .p-break {
+    display: inline;
+  }
+
+  .countdown {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  div[class*="countdown-"] {
+    flex-grow: 1;
+    padding: 10px 20px;
+  }
+  div[class*="countdown-"] > span:last-child {
+    margin-top: -20px;
+    font-size: 2.2rem;
+  }
+
+  .contact-links p {
+    font-size: 1.6rem;
+    line-height: 170%; /* 22.1px */
+    letter-spacing: 1px;
+  }
+
+  .section-two {
+    width: 100%;
+    padding: 4rem 16px;
+  }
+
+  .section-two .punch-line {
+    font-size: 4rem;
+    margin-bottom: 95rem;
+    max-width: 600px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .break-desktop {
+    display: none;
+  }
+  .section-two .punch-line {
+    margin-bottom: 70rem;
+  }
+}
+@media only screen and (max-width: 415px) {
+  .section-one h1 {
+    font-size: 5rem;
+  }
+  .countdown {
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 2100px) {
+  .car-desktop {
+    top: 40%;
+  }
+}
