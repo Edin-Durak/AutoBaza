@@ -1,4 +1,4 @@
-# Landing countdown page 
+# Car shop Landing countdown page 
 One group of individuals tryed to make a car seling platform for clients in our country Bosnia and Herzegovina.
 They provided me Figma design so I can convert it into code. I used vanilla HTML/CSS/JS for this project as well. The reason is simple - simplier the better.
 Unfortunetly the project is on hold for now dua to fininal issues. You can check the live website on this link: https://autobaza.ba/
@@ -8,5 +8,8 @@ I used a desktop-first approach, as the main target for this website should be c
 On the images below, you can see the desktop and mobile versions.
 
 Desktop view:
+![AutoBaza desktop](https://github.com/Edin-Durak/AutoBaza/assets/138677399/5cc0afe4-3359-4994-a957-227945973247)
 
 Mobile view:
+
+![AutoBaza mobile](https://github.com/Edin-Durak/AutoBaza/assets/138677399/ff90224b-18f3-4fe0-9ade-3d18602feeb3)
